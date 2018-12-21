@@ -1,4 +1,4 @@
-package exceptions;
+package model.exceptions;
 
 public class StaleCofeeException extends Exception{
     int time;

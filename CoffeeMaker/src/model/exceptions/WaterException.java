@@ -1,4 +1,4 @@
-package exceptions;
+package model.exceptions;
 
 public class WaterException extends Exception {
     public double getAmount() {

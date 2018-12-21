@@ -1,4 +1,4 @@
-package exceptions;
+package model.exceptions;
 
 public class BeansAmountException extends Exception {
     private double beans;

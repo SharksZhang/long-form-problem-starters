@@ -1,4 +1,4 @@
-package exceptions;
+package model.exceptions;
 
 public class NotEnoughBeansException extends BeansAmountException {
     public NotEnoughBeansException(double beans) {
