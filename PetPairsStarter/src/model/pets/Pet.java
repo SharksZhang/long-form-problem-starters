@@ -2,12 +2,29 @@ package model.pets;
 
 import model.Human;
 
+import java.util.Objects;
+
 public class Pet {
     protected boolean friendly;
     protected boolean needsAttention;
     protected String species;
     protected String color;
     protected double price;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pet)) return false;
+        Pet pet = (Pet) o;
+        return Objects.equals(species, pet.species) &&
+                Objects.equals(color, pet.color);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(species, color);
+    }
 
     public Pet(String species, String color, boolean friendly, boolean needsAttention, double price){
         this.species = species;

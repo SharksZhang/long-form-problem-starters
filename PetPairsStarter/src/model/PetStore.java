@@ -3,9 +3,10 @@ package model;
 import model.pets.Pet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class PetStore {
-
+    private HashMap<String, ArrayList<Pet>> animals = new HashMap<>();
     //MODIFIES: this
     //EFFECTS: adds p to the petstore
     public void addPet(Pet p){
