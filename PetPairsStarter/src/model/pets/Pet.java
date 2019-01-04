@@ -10,6 +10,7 @@ public class Pet {
     protected String species;
     protected String color;
     protected double price;
+    protected Human human;
 
     @Override
     public boolean equals(Object o) {
@@ -58,7 +59,7 @@ public class Pet {
     }
 
     public Human getHuman() {
-        return null;
+        return human;
     }
 
     //REQUIRES: human != null
@@ -69,6 +70,7 @@ public class Pet {
 
         if (!human.hasPet(this)){
             human.adoptPet(this);
+            this.human = human;
             System.out.println("Success! Adopted " + human);
         }
     }
@@ -80,7 +82,7 @@ public class Pet {
                 ", friendly=" + friendly +
                 ", color='" + color + '\'' +
                 ", price='" + price + '\'' +
-                ", human= " + //TODO 5
+                ", human= " + human +
                 '}';
     }
 }
