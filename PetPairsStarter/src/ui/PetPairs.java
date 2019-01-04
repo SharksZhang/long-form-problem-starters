@@ -15,6 +15,7 @@ public class PetPairs {
     private ArrayList<Human> people = new ArrayList<>();
 
     public PetPairs() {
+
         Cat cat = new Cat("calico", false, true, 55.00);
         Dog dog = new Dog("black");
         Parrot parrot = new Parrot("green and red", true, false, 20.00);
@@ -50,6 +51,7 @@ public class PetPairs {
 
         int result = sally.numPetsOfSpecies("dog");
         System.out.println("Sally has " + result + " dog(s)");
+        store.displayAllPetsWithAttributes(true, false, 50.00);
     }
 
 }
