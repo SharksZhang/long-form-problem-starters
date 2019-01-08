@@ -25,6 +25,7 @@ public class Chef {
     //EFFECTS: prints out the recipe being followed
     private void followRecipe() {
         System.out.println(PREFIX + "Stacking meat... Placing veggies.... ");
+        System.out.println(PREFIX + "Pouring sriracha! Spreading avocado! Trendy!");
     }
 
     //EFFECTS: prints out a message about cooking food

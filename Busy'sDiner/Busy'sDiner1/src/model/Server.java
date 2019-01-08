@@ -38,8 +38,8 @@ public class Server {
 
     //EFFECTS: prints out a description of the dish on the menu
     public void describeDish() {
-        System.out.println("\"Our somewhat bland sandwich has bread, lettuce, tomato, " +
-                "cheddar cheese, turkey and bacon.\"");
+//        System.out.println("\"Our somewhat bland sandwich has bread, lettuce, tomato, " +
+//                "cheddar cheese, turkey and bacon.\"");
     }
 
     //EFFECTS: prints out a greeting

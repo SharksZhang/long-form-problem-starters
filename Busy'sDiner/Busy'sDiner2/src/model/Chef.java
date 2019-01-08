@@ -5,7 +5,6 @@ public class Chef {
     private static final String PREFIX = "CHEF - ";
 
     private Order order;
-
     public Chef() {
         order = null;
     }
@@ -28,12 +27,26 @@ public class Chef {
 
     //EFFECTS: prints out the ingredients being prepared
     private void prepareIngredients() {
-        System.out.println(PREFIX + "Slicing tomatoes... Shredding lettuce...");
+        System.out.print(PREFIX);
+
+        int i = 1;
+        for (String s : this.order.getIngredients()) {
+
+            //NOTE: the next three lines included only for pretty formatting!
+            if (i % 5 == 0)
+                System.out.print("\n" + PREFIX);
+            i++;
+
+            System.out.print("Preparing " + s + "... ");
+
+        }
+        System.out.println();
     }
 
     //EFFECTS: prints out the recipe being followed
     private void followRecipe() {
-        System.out.println(PREFIX + "Stacking meat... Placing veggies.... ");
+//        System.out.println(PREFIX + "Stacking meat... Placing veggies.... ");
+        System.out.println(PREFIX + this.order.getRecipe());
     }
 
     //EFFECTS: prints out a message about cooking food
