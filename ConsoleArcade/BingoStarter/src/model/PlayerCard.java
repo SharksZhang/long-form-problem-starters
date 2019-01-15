@@ -2,13 +2,14 @@ package model;
 
 import model.random.BingoNumber;
 import model.random.NumberSquare;
+import model.observer_pattern.Observer;
 
 import java.util.*;
 
 import static model.Game.CARD_SIZE;
 
 //TODO: implement Observer pattern
-public class PlayerCard {
+public class PlayerCard implements Observer{
 
     private List<NumberSquare> numbers;
     private List<Collection<Integer>> colIndices;
@@ -192,5 +193,8 @@ public class PlayerCard {
         coll.add(indices);
     }
 
-
+    @Override
+    public void update(Object o) {
+        this.checkCallMatch(o);
+    }
 }
